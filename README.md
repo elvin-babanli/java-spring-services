@@ -1,21 +1,23 @@
 # Java Spring Services
 
-A collection of Spring Boot applications demonstrating modern backend development using Spring MVC, REST APIs, Swagger documentation, and database integration with JPA.
+A collection of Spring Boot applications demonstrating modern backend development using Spring MVC, RESTful APIs, Swagger documentation, and database integration with JPA.
+
+This repository is designed to showcase clean architecture, REST principles, and practical backend patterns suitable for real-world applications and portfolio usage.
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This repository contains two independent Spring Boot applications:
 
-- **Task 1** – A simple Spring MVC application using Thymeleaf for server-side rendering
-- **Task 2** – A RESTful Product API with full CRUD operations, Swagger documentation, and H2 in-memory database
+- **Task 1** – A Spring MVC application using Thymeleaf for server-side rendering
+- **Task 2** – A RESTful Product API with full CRUD functionality, Swagger documentation, and an H2 in-memory database
 
-The projects are designed to showcase clean structure, REST principles, and real-world backend patterns.
+Both applications are fully functional and ready for demonstration.
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 java-spring-services/
 ├── Task1SpringMVC
@@ -23,18 +25,21 @@ java-spring-services/
 ├── screenshots
 └── README.md
 
+yaml
+Copy code
 
 ---
 
-## 🖥️ Task 1 – Spring MVC Application
+## Task 1 – Spring MVC Application
 
-### Description
-A basic Spring MVC application that demonstrates:
-- Plain text responses
-- Server-side rendered HTML using Thymeleaf
-- Static resource handling (images)
+This application demonstrates the fundamentals of Spring MVC and server-side rendering.
 
-### Available Endpoints
+### Features
+- Plain text HTTP response
+- Thymeleaf-based HTML rendering
+- Static resource handling (image support)
+
+### Endpoints
 - **GET /**  
   Returns a plain text response.
 
@@ -42,15 +47,15 @@ A basic Spring MVC application that demonstrates:
   Renders an HTML page using Thymeleaf.
 
 ### Screenshot
+
 ![Task 1 Greeting Page](screenshots/task1-greeting-page.png)
 
 ---
 
-## 🌐 Task 2 – Product REST API
+## Task 2 – Product REST API
 
-### Description
 A RESTful backend service for managing products.  
-The application follows layered architecture and exposes CRUD endpoints documented with Swagger.
+The application follows a layered architecture and exposes CRUD endpoints documented with Swagger.
 
 ### Technologies Used
 - Java 17
@@ -63,20 +68,22 @@ The application follows layered architecture and exposes CRUD endpoints document
 
 ---
 
-## 📘 Swagger Documentation
+## Swagger Documentation
 
 Swagger UI is available after running the application:
 
 http://localhost:8080/swagger-ui/index.html
 
+yaml
+Copy code
 
 ![Swagger Overview](screenshots/swagger-overview.png)
 
 ---
 
-## 📦 API Endpoints
+## API Endpoints
 
-### ➕ Create Product
+### Create Product
 **POST /api/v1/products**
 
 Request body:
@@ -85,22 +92,106 @@ Request body:
   "name": "Laptop",
   "price": 1200
 }
+Response:
+
+201 Created
 
 
+Get Product by ID
+GET /api/v1/products/{id}
+
+Response:
+
+200 OK
 
 
-![Swagger Overview](screenshots/swagger-overview.png)
+Get All Products
+GET /api/v1/products
+
+Response:
+
+200 OK
+
+
+Update Product
+PUT /api/v1/products/{id}
+
+Request body:
+
+json
+Copy code
+{
+  "name": "Updated Laptop",
+  "price": 1500
+}
+Response:
+
+200 OK
+
+Returns the previous state of the product as required
+
+
+Delete Product
+DELETE /api/v1/products/{id}
+
+Response:
+
+204 No Content
+
+
+H2 Database Console
+The H2 database console is available at:
+
+bash
+Copy code
+http://localhost:8080/console
+Connection details:
+
+JDBC URL: jdbc:h2:mem:testdb
+
+Username: sa
+
+Password: (empty)
+
+Example SQL query:
+
+sql
+Copy code
+SELECT * FROM PRODUCTS;
+
+How to Run the Applications
+Open the project in IntelliJ IDEA
+
+Ensure Java 17 is selected as the Project SDK
+
+Run the main application classes:
+
+Task1SpringMvcApplication for the Spring MVC app
+
+FirstRestApiApplication for the REST API
+
+Access the application via browser or Swagger UI
+
+Final Notes
+All endpoints were tested using Swagger UI
+
+Database operations are managed using Spring Data JPA
+
+The repository is structured for clarity and future expansion
+
+Fully functional and ready for demonstration or portfolio use
+
+yaml
+Copy code
 
 ---
 
-## 📦 API Endpoints
+✅ Bununla iş **tam bağlandı**  
+📦 Repo professional görünür  
+💼 CV / portfolio üçün problemsizdir  
 
-### ➕ Create Product
-**POST /api/v1/products**
+İstəsən növbəti addımda:
+- repo-nu **portfolio layihəsi kimi təqdim etməyi**
+- ya da **növbəti Spring Boot layihəsinə keçməyi**
 
-Request body:
-```json
-{
-  "name": "Laptop",
-  "price": 1200
-}
+davam etdirə bilərik.
