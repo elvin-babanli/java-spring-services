@@ -25,8 +25,6 @@ java-spring-services/
 ├── screenshots
 └── README.md
 
-yaml
-Copy code
 
 ---
 
@@ -87,11 +85,13 @@ Copy code
 **POST /api/v1/products**
 
 Request body:
-```json
+
 {
   "name": "Laptop",
   "price": 1200
 }
+
+
 Response:
 
 201 Created
@@ -181,14 +181,8 @@ The repository is structured for clarity and future expansion
 
 Fully functional and ready for demonstration or portfolio use
 
-yaml
-Copy code
 
 ---
-
-✅ Bununla iş **tam bağlandı**  
-📦 Repo professional görünür  
-💼 CV / portfolio üçün problemsizdir  
 
 İstəsən növbəti addımda:
 - repo-nu **portfolio layihəsi kimi təqdim etməyi**
