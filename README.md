@@ -181,7 +181,6 @@ SELECT * FROM PRODUCTS;
 
 ---
 
-## Final Notes
 
 - All endpoints were tested using Swagger UI
 - Database operations are managed using Spring Data JPA
